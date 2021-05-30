@@ -1,6 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
+import { StatusBar } from 'react-native';
 
 import {
   useFonts,
@@ -23,7 +24,8 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />
   }
-
+  
+  {/* <StatusBar barStyle="default" backgroundColor="transparent" translucent /> */}
   return (
     <ThemeProvider theme={theme} >
       <Dashboard />
