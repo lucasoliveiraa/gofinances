@@ -1,19 +1,42 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { HighlightCard } from '../../components/HighlightCard';
+
+import { 
+  Container,
+  Header,
+  UserWrapper,
+  UserInfo,
+  Photo,
+  User,
+  UserGreeting,
+  UserName,
+  Icon,
+  HighlightCards,
+} from './styles';
+
 
 export function Dashboard() {
   return (
-    <View style={styles.container}>
-      <Text>Dashboard</Text>
-    </View>
+    <Container>
+      <Header>
+        <UserWrapper>
+          <UserInfo>
+            <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/35904773?v=4' }}/>
+            <User>
+              <UserGreeting>Olá, </UserGreeting>
+              <UserName>Lucas</UserName>
+            </User>
+          </UserInfo>
+
+          <Icon name="power"/>
+        </UserWrapper>
+      </Header>
+
+      <HighlightCards>
+        <HighlightCard />
+        <HighlightCard />
+        <HighlightCard />
+      </HighlightCards>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
