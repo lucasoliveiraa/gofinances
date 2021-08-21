@@ -71,7 +71,6 @@ export function Register() {
       transactionType,
       category: category.key
     }
-
     console.log(data)
   }
 
