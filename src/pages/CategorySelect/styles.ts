@@ -31,7 +31,7 @@ export const Title = styled.Text`
 
 export const Category = styled.TouchableOpacity<CategoryProps>`
   width: 100%;
-  padding: ${RFValue(15)}px;
+  padding: ${RFValue(15)}px ${RFValue(24)}px;
   flex-direction: row;
   align-items: center;
 
@@ -62,8 +62,7 @@ export const Separator = styled.View`
   background-color: ${({theme})=> theme.colors.text};
 `;
 
-
 export const Footer = styled.View`
   width: 100%;
-  padding: ${RFValue(15)}px;
+  padding: ${RFValue(24)}px;
 `;

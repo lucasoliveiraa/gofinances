@@ -12,9 +12,8 @@ import {
 
 import theme from './src/global/styles/theme';
 
-import { Dashboard } from './src/pages/Dashboad';
-import { Register } from './src/pages/Register';
-import { CategorySelect } from './src/pages/CategorySelect';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -27,10 +26,12 @@ export default function App() {
     return <AppLoading />
   }
   
-  {/* <StatusBar barStyle="default" backgroundColor="transparent" translucent /> */}
   return (
     <ThemeProvider theme={theme} >
-      <Register />
+      <NavigationContainer>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+        <AppRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
