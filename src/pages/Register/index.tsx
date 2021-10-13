@@ -71,7 +71,14 @@ export function Register() {
       transactionType,
       category: category.key
     }
-    console.log(data)
+   
+    try {
+
+    } catch (err) {
+      console.log(err);
+
+      Alert.alert('Não foi possivel salvar')
+    }
   }
 
   return (
