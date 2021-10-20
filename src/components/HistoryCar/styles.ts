@@ -23,4 +23,7 @@ export const Title = styled.Text`
   font-size: ${RFValue(15)}px;
 `;
 
-export const Amount = styled.Text``;
+export const Amount = styled.Text`
+  font-family: ${({theme}) => theme.fonts.bold};
+  font-size: ${RFValue(15)}px;
+`;
