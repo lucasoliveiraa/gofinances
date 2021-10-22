@@ -5,6 +5,7 @@ import 'intl/locale-data/jsonp/pt-BR';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
 import { StatusBar } from 'react-native';
+import { AuthProvider } from './src/hooks/auth';
 
 import {
   useFonts,
@@ -35,7 +36,10 @@ export default function App() {
     <ThemeProvider theme={theme} >
       <NavigationContainer>
         <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-        <SignIn />
+        
+        <AuthProvider>
+          <SignIn />
+        </AuthProvider>
       </NavigationContainer>
     </ThemeProvider>
   );
